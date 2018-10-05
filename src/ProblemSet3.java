@@ -23,24 +23,25 @@ public class ProblemSet3 {
 		Scanner in = new Scanner(System.in);
 
 		ProblemSet3 ps3 = new ProblemSet3();
-		ps3.dateFashion(6, 3);
-		ps3.fizzString("");
-		ps3.squirrelPlay(94, true);
-		ps3.fizzStringAgain(18);
+		ps3.dateFashion(5, 10);
+		ps3.fizzString("abc");
+		ps3.squirrelPlay(95, true);
+		ps3.fizzStringAgain(15);
 		ps3.makeBricks(3, 2, 10);
 		ps3.loneSum(3, 3, 3);
-		
+		ps3.luckySum(1, 2, 3);
+		ps3.factorialWithFor(4);
 	}
 		
 	public void dateFashion(int you, int date) {
 		if (you <= 2 || date <= 2) {
-			System.out.println("You will not get a table");
+			System.out.println("NO");
 		}
 		else if (you >= 8 || date >= 8) {
-			System.out.println("You will get a table");
+			System.out.println("YES");
 		}
 		else {
-			System.out.println("You will maybe get a table");
+			System.out.println("MAYBE");
 		}
 	}
 	
@@ -128,11 +129,31 @@ public class ProblemSet3 {
 	}
 	
 	public void luckySum(int a, int b, int c) {
-		
+		int sum;
+		if (a != 13 && b != 13 && a != 13) {
+			sum = a + b + c;
+			System.out.println(sum);
+		}
+		else if (a == 13) {
+			sum = 0;
+			System.out.println(sum);
+		}
+		else if (a != 13 && b == 13) {
+			sum = a;
+			System.out.println(sum);
+		}
+		else if (a != 13 && b != 13 && c == 13) {
+			sum = a + b;
+		}
 	}
 	
 	public void factorialWithFor(int n) {
-		
+		int x = 1;
+		int n;
+		int factor = 1;
+		for (x=1; x<=n;x++) {
+			factor = factor * 1;
+		}
 	}
 	
 	public void factorialWithWhile(int n) {
