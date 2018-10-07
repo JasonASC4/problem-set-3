@@ -31,6 +31,8 @@ public class ProblemSet3 {
 		ps3.loneSum(3, 3, 3);
 		ps3.luckySum(1, 2, 3);
 		ps3.factorialWithFor(4);
+		ps3.factorialWithWhile(4);
+		ps3.isPrime(144);
 	}
 		
 	public void dateFashion(int you, int date) {
@@ -148,19 +150,37 @@ public class ProblemSet3 {
 	}
 	
 	public void factorialWithFor(int n) {
-		int x = 1;
-		int n;
-		int factor = 1;
-		for (x=1; x<=n;x++) {
-			factor = factor * 1;
-		}
+       int result = 1;
+       for (int i = 1; i <= n; i++) {
+           result = result * i;
+       }
+       System.out.println(result);
 	}
 	
 	public void factorialWithWhile(int n) {
-		
-	}
+	    int result = 1;;
+        int i = 1;
+        while(i <= n) {
+            result *= i;
+            i++;
+        }
+        System.out.println(result);
+    }
 	
 	public void isPrime(int n) {
-		
+	    int temp;
+	boolean isPrime=true;
+	    for(int i=2;i<=n/2;i++) {
+           temp=n%i;
+	   if(temp==0)
+	   {
+	      isPrime=false;
+	      break;
+	   }
 	}
+	if(isPrime)
+	   System.out.println("PRIME");
+	else
+	   System.out.println("NOT PRIME");
+   }
 }
